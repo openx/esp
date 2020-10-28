@@ -1,0 +1,65 @@
+<html>
+
+    <head>
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <script src="//www.googletagservices.com/tag/js/gpt.js"></script>
+        <script async data-ox-debug=1 src="https://oa.openxcdn.net/esp.js"></script>
+
+        <script>
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            googletag.cmd.push(function() {
+                googletag.pubads().disableInitialLoad();
+            });
+
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/19968336/header-bid-tag-0',  [[300, 250],[300,600]], 'div-1').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/19968336/header-bid-tag-1',  [[728, 90],[970, 250]], 'div-2').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+            googletag.cmd.push(function() {
+                googletag.pubads().refresh();
+            });
+
+        </script>
+
+    </head>
+
+    <body>
+      <h2>Basic ESP Example</h2>
+      Steps to see the ESP flow:<br>
+      <ul>
+      <li>Delete the current ESP value from localStorage, likely found under _GESPSK-openxtest.</li>
+      <li>On the next page load verify a call to the OpenX endpoint https://oajs.openx.net/esp and a response is returned (you will have to have 3rd party cookies enabled).</li>
+      <li>Finally, on the next page load you can check the GPT call https://securepubads.g.doubleclick.net/gampad/ads for the query argument a3p which will contain encrypted signals.</li>
+      </ul>
+      <h5>Div-1</h5>
+        <div id='div-1'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function() {
+                    googletag.display('div-1');
+                });
+
+            </script>
+        </div>
+
+        <br>
+
+        <h5>Div-2</h5>
+        <div id='div-2'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function() {
+                    googletag.display('div-2');
+                });
+
+            </script>
+        </div>
+
+    </body>
+
+</html>
